@@ -1,0 +1,512 @@
+/* reset css */
+*{
+  padding: 0px;
+  /*margin: 0;*/
+  box-sizing: border-box;  
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif
+    color: #C3B091;
+    /* font-size: 10px; */
+}
+
+.clear{
+    clear: both;
+}
+
+#main {
+    padding: 50px;
+
+}
+
+#header {
+    height: 70px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#logo{
+    float: left; 
+    margin-left: 30px; 
+    /* width: auto; */
+    height: 30px;
+}
+
+#nav {
+    float: right;
+}
+
+/*-----------------Nar bav---------------------------*/
+
+#nav li { 
+    display: inline-block;
+    /* float: right; */
+    position: relative;
+    list-style-type: none;
+    margin-top: 2px;
+    text-align: right;
+    transition: transform 0.5s ease-out;
+    vertical-align: top;
+}
+/* css khi an vao cac nut tao hieu ung */
+#nav a:hover,
+#nav a:active {
+    color: green;
+}
+
+#nav a:hover,
+#nav a:active {
+    color: #6B4423;
+}
+
+#nav a:hover,
+#nav a:active {
+    letter-spacing: 5px;
+}
+
+#nav a:after,
+#nav a:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+    opacity: 0;
+}
+
+#nav a:after,
+#nav a:before {
+    border: 1px solid green;
+}
+
+#nav a:after,
+#nav a:before {
+    border: 1px solid #6B4423;
+}
+
+#nav a:hover:after,
+#nav a:hover:before {
+    backface-visibility: hidden;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+    opacity: 1;
+}
+/* css khi an vao cac nut tao hieu ung */
+
+.subnav {
+    display: none;
+    position: absolute;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+/*---------------------------dropdown-----------------------------------------*/
+.subnav li {
+    margin-left: 0 !important;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 2px 4px 2px  rgba(0, 0, 0, 0.2);
+    padding: 12px 16px; 
+    z-index: 1;
+    text-align: center;
+    font-size: 5em;
+}
+
+#nav li a{
+    text-decoration: none;
+    display: block;
+    color: rgb(13, 26, 38);
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 4px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+} 
+/*---------------------------dropdown-----------------------------------------*/
+
+/*-----------------Nav bar_end------------------------*/
+
+/*---------------------slider_start---------------------*/
+#slider { 
+    /*display: block; 
+    height: 1000px; 
+    max-width: 100%; 
+    position: relative; */
+    display: block;
+    width: 100%;
+    border: none;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+    
+/*#slider img { 
+    animation: show 10s infinite;
+    -webkit-animation: show 10s infinite;
+    /* border-radius: 50%; */
+    /* height: auto; */
+    /* max-width: 100%; */
+    /*opacity: 0;
+    position: absolute; */
+    
+    /*アニメーション*/
+    
+/* @keyframes show {
+    0% {opacity:0}
+    5% {opacity:1}
+    10% {opacity:1}
+    20% {opacity:0}
+}
+    
+@-webkit-keyframes show {
+    0% {opacity:0}
+    5% {opacity:1}
+    10% {opacity:1}
+    20% {opacity:0}
+} */
+    
+    /*各画像のアニメーションの開始時間をずらす*/
+    
+/*#slider img:nth-of-type(1) {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+    
+#slider img:nth-of-type(2) {
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+    
+#slider img:nth-of-type(3) {
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+    
+#slider img:nth-of-type(4) {
+    animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+}*/
+    
+/*マウスが画像に重なった際、動きを止めて四角くする*/
+    
+/*#slider img {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+    
+#slider:hover img {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    border-radius: 0;
+}*/
+
+/*-----------------------slider_end-------------------------*/
+#content .about_us{
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+#content {
+    display: block;
+    background-color: #DAC8AE;
+    padding: 10px;    
+}
+
+#content p{
+    word-wrap: break-word;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/*---------------------------btn------------------------*/
+.about_us_btn {
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #464543;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+      
+.about_us_btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #CC7722;
+    transition: 0.5s ease;
+}
+      
+.about_us_btn:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+}
+      
+.about_us_btn:hover:before {
+    width: 100%;
+}
+      
+.about_us_btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: ##CC7722;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+      
+.about_us_btn:hover:after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+/*--------------------------------------btn_end----------------------------*/
+.product {
+    margin-top: 10px;
+}
+
+.product_item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.product_name {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.product_img{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+/*-------------animation khi an vao anh--------------------*/
+.img {
+    pointer-events: none;
+    position: relative; 
+    transform: translateY(20px) scale(1.15);
+    transform-origin: 100% 50%;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product_img:hover {
+    transform: translateY(0) scale(1.2);
+} 
+/*--------------------animation khi an vao anh _end-------------------*/
+/*------------animation ------------------- */
+.product_name {
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    /* color: #464543; */
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+      
+.product_name:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #DAC8AE;
+    transition: 0.5s ease;
+}
+      
+.product_name:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+}
+      
+.product_name:hover:before {
+    width: 100%;
+}
+      
+.product_name:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #DAC8AE;
+    transition: 0.4s ease;
+    z-index: -1;
+    border-radius: 100%;
+}
+      
+.product_name:hover:after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+/*-----------------------------------animation---------------------*/
+
+/*-----------------------------news-----------------------*/
+.news_title .news_title_name {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.news-list{
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+.news-list .item a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #CCC;
+    padding: 20px 20px;
+}
+.news-list .item:first-child a{
+    border-top: 1px solid #CCC;
+}
+.news-list .item .date{
+    margin: 0;
+    min-width: 120px;
+    font-size: 16px;
+    color: #6B4423;
+    padding: 0 20px 0 0;
+}
+.news-list .item .title{
+    margin: 0;
+    width: 100%;
+}
+.news-list .item a:hover .title{
+    color: #CC7722;
+}
+  
+/* @media screen and (max-width: 767px){
+.news-list .item a{
+    flex-wrap: wrap;
+}
+.news-list .item .date{
+    min-width: 100px;
+}
+.news-list .item .title{
+    margin-top: 10px;
+}
+} */
+/*--------------------------news_end----------------------------*/
+
+/*--------------------contact-----------------------------*/
+#contact .contact_name {
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 2px; 
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.contact_form_full{
+    width: 100%;
+}
+
+.contact_form_haft{
+    width: 50%;
+}
+
+.send_btn{
+    padding: 10px 18px;
+    border: 1px;
+    float: right;
+}
+
+.send_btn:hover{
+    background-color: #C3B091;
+    cursor: pointer;
+}
+
+.contact_content{
+    margin-top: 48px;
+    margin-left: 300px;
+}
+
+.contact_info{
+    font: 18px;
+    line-height: 1.5;
+}
+
+.contact_info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact_form{
+    font: 15px;
+    margin-left: 150px;
+}
+
+.contact_form .form_control{
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.contact_form .send_btn{
+    padding-top: 15px;
+    /* float: right; */
+}
+
+
+
+#footer {
+
+
+}
